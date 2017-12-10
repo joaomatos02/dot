@@ -137,3 +137,6 @@ export PATH="/Users/jcosta/.cargo/bin:$PATH"
 RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 export EDITOR="vim"
+
+# git to use with dot files repository
+alias git-dotes='git --git-dir=/Users/jcosta/.dotes/ --work-tree=/Users/jcosta'
