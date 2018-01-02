@@ -125,9 +125,9 @@ call vundle#end()
 
 """""""""""""""""COMPLETOR"""""""""""
 let g:completor_min_chars = 0
-let g:completor_completion_delay = 20
+let g:completor_completion_delay = 5
 let g:completor_auto_trigger = 0
-"let g:completor_auto_close_doc = 0
+let g:completor_auto_close_doc = 1
 inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
 "inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -140,7 +140,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:completor_python_binary = '/usr/local/opt/python/libexec/bin/python'
 
 """RUST
-let g:completor_racer_binary = '/Users/jcosta/.cargo/bin/racer'
+let g:completor_racer_binary = 'racer'
 
 
 
@@ -242,7 +242,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 "Colorschemes
 set t_Co=256
-"set background=dark
+set background=dark
 colorscheme PaperColor
 
 

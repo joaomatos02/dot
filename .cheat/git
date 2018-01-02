@@ -151,11 +151,10 @@ git revert <commit SHA>
 git cherry-pick <commit SHA1>
 
 
-## Dot Files repository
-git init --bare $HOME/.cfg
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+## Dot Files repository - What I did###
+git init --bare $HOME/.dotes
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dotes/ --work-tree=$HOME'" >> $HOME/.zshrc
+git-dotes config --local status.showUntrackedFiles no
 #commands
 config status
 config add .vimrc
@@ -164,3 +163,11 @@ config add .bashrc
 config commit -m "Add bashrc"
 config push
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+
+### TO USE THE REPOSITORY####
+#
+alias git-dotes='/usr/bin/git --git-dir=$HOME/.dotes/ --work-tree=$HOME'
+git clone --bare <git-repo-url> $HOME/.dotes
+git-dotes checkout
+git-dotes config --local status.showUntrackedFiles no
+
