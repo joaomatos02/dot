@@ -1,0 +1,1 @@
+unicycler -1 <illumina_R1> -2 <illumina_R2> -l <nanopore.fastq> -o <out_folder>

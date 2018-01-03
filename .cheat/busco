@@ -1,0 +1,7 @@
+
+
+
+
+config file in tools/busco_conf
+
+export BUSCO_CONFIG_FILE="/home/jcosta/tools/busco_conf/config.ini" 
